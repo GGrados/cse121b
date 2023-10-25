@@ -1,0 +1,77 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+
+}
+
+/*FORM*/
+body {
+    background-color: #000;
+}
+
+#form-box {
+    padding: 2rem;
+    
+}
+
+#form-box form {
+    color: white;
+    
+}
+
+#form-box form fieldset legend{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+#form-box form fieldset label {
+    padding: 0.5rem;
+    
+}
+
+#form-box form fieldset label.top{
+    display: block;
+}
+
+#form-box form fieldset label input {
+    color: black;
+    padding: 0;
+    margin-left: 0.8rem;
+}
+
+#submitBtn{
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color: yellow;
+    border: 1px solid black;
+    font-size: 1.2rem;
+}
+
+
+/*Resume Section*/
+
+#resume-container {
+    background-color: white;
+    text-align: center;
+}
+
+
+#resume-container #fullName {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#resume-container #phoneNumber, #email {
+    display: inline;
+    padding-inline: 1rem;
+}
+
+
+#EducationLevel,#institutionName,#institutiosAddress,#companyName,#workRole,#endDate,#startDate {
+    text-align: left;
+    padding-left: 1rem;
+}
+

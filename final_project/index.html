@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <div id="form-box">
+
+        <form method="get">
+            <fieldset id="personal-information">
+                <legend>Personal Information</legend>
+                <label class="top">Full Name*<input type="text" name="fname" id="fullName" required ></label>
+                <label class="top">Phone<input type="tel" name="phone" placeholder="1235551234" id="phoneNumber"></label>
+                <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" id="email" required></label>
+            </fieldset>
+
+            <fieldset id="education">
+                <legend>Education</legend>
+                <label class="top">Education Level<input type="text" name="educationLevel" id="EducationLevel" required></label>
+                <label class="top">Institution Name*<input type="text" name="institutionName" id="institutionName" required></label>
+                <label class="top">Address<input type="text" name="address" id="institutiosAddress" required></label>
+            </fieldset>
+
+
+            <fieldset id="work-experience">
+                <legend>Work Experience</legend>
+                <label class="top">Company*<input type="text" name="company"  id="companyName" required ></label>
+                <label class="top">Work Role*<input type="text" name="wrole" id="workRole" required ></label>
+                <label class="sbs">Start Date<input type="date" name="StartDate" id="startDate"></label>
+                <label class="sbs">End Date<input type="date" name="EndDate" id="endDate"></label>
+
+            </fieldset>
+
+            <input type="submit" value="Create Resume"  class="submitBtn" id="submitBtn">
+
+        </form>
+
+
+
+
+        <div id="resume-container"></div>
+        <script src="scripts/script.js"></script>
+    </main>
+
+    
+
+    <footer>
+
+
+    </div>
+    
+</body>
+</html>

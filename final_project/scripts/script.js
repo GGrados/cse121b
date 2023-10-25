@@ -1,4 +1,5 @@
 const resumePreview = document.querySelector("#resume-preview"); //main Container
+const pdfButton = document.querySelector("#pdf");
 
 const createResume = () => {
   const education = document.querySelector("#education");
@@ -8,6 +9,8 @@ const createResume = () => {
   getData(personalInfoFieldsset);
   getData(education);
   getData(workExperience);
+
+  pdfButton.style.display = "block";
 };
 
 const getData = (htmlFieldsetTag) => {
@@ -54,20 +57,21 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
 /*PDF*/
 // Configure the PDF options
-const options = {
-  margin: 10,
-  filename: "your-document.pdf",
-  image: { type: "jpeg", quality: 0.98 },
-  html2canvas: { scale: 2 },
-  jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-};
 
-// Create the PDF
-html2pdf()
-  .from(element)
-  .set(options)
-  .outputPdf((pdf) => {
-    // You can save, display, or do whatever you want with the generated PDF here
-    // For example, to display it in a new window:
-    pdf.output("dataurlnewwindow");
-  });
+const resume = document.querySelector("#resume-container");
+
+async function getpdfConfig() {
+  const url =
+    "https://ggrados.github.io/cse121b/final_project/data/pdfConfig.json";
+  const data = await fetch(url);
+  const jsonData = await data.json();
+  return jsonData;
+}
+
+const pdfConfigs = getpdfConfig();
+
+function createPdf() {
+  html2pdf().from(resume).set(pdfConfigs).save();
+}
+
+pdfButton.addEventListener("click", createPdf);
